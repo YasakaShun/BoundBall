@@ -850,6 +850,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedX: 10
   speedY: 0
+  maxMagnitude: 50
 --- !u!54 &1772553808
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -864,7 +865,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 8
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!135 &1772553809
 SphereCollider:
   m_ObjectHideFlags: 0
