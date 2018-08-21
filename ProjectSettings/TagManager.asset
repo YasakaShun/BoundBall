@@ -14,9 +14,9 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - Depth0
-  - Depth-2
-  - 
+  - Depth-Back
+  - Depth-Front
+  - Ball
   - 
   - 
   - 
