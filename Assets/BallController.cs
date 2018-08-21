@@ -6,20 +6,29 @@ public class BallController : MonoBehaviour
 
     public float speedX = 10.0f;
     public float speedY = 0.0f;
+    public float maxMagnitude = 50.0f;
+    public bool displayMagnitude = false;
 
-    // Use this for initialization
     void Start()
     {
-        var vel = new Vector3(speedX, speedY, 0.0f);
         this.GetComponent<Rigidbody>().AddForce(
-            vel,
-            ForceMode.VelocityChange);
+            new Vector3(speedX, speedY, 0.0f),
+            ForceMode.VelocityChange
+            );
 
     }
 
-    // Update is called once per frame
     void Update()
     {
+    }
 
+    void FixedUpdate()
+    {
+        var rigidbody = this.GetComponent<Rigidbody>();
+        rigidbody.velocity = Vector3.ClampMagnitude(rigidbody.velocity, maxMagnitude);
+        if (displayMagnitude)
+        {
+            Debug.Log(rigidbody.velocity.magnitude);
+        }
     }
 }
