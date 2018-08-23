@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="Assets\BallController.cs" />
     <Compile Include="Assets\Racket.cs" />
+    <Compile Include="Assets\Resources\Scripts\Main\MissArea.cs" />
     <Compile Include="Assets\Resources\Scripts\Title\TitleGameSystem.cs" />
     <Compile Include="Assets\WallUv.cs" />
     <None Include="Assets\Resources\Gradation.shader" />
