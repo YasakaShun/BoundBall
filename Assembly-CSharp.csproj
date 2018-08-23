@@ -63,7 +63,7 @@
   <ItemGroup>
     <Compile Include="Assets\BallController.cs" />
     <Compile Include="Assets\Racket.cs" />
-    <Compile Include="Assets\resources\Scripts\Title\TitleGameSystem.cs" />
+    <Compile Include="Assets\Resources\Scripts\Title\TitleGameSystem.cs" />
     <Reference Include="Unity.RenderPipelines.Core.Editor">
       <HintPath>Q:/BoundBall/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
     </Reference>
