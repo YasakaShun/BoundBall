@@ -8,7 +8,6 @@ public class TitleGameSystem : MonoBehaviour
     public void GameStart()
     {
         SceneManager.LoadScene("Level0");
-        // Application.LoadLevel("Level0");
     }
 
     public void Quit()
