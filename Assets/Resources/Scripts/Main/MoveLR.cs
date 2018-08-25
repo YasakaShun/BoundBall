@@ -3,7 +3,7 @@ using System.Collections;
 
 public class MoveLR : MonoBehaviour
 {
-    private const float Accel = 1000.0f;
+    private const float Speed = 15.0f;
 
     void Start()
     {
@@ -13,9 +13,13 @@ public class MoveLR : MonoBehaviour
     void Update()
     {
         //力を加える
-        this.GetComponent<Rigidbody>().AddForce(
-            Vector3.right * Input.GetAxisRaw("Horizontal") * Accel,
-            ForceMode.Impulse
-            );
+        //this.GetComponent<Rigidbody>().AddForce(
+        //    Vector3.right * Input.GetAxisRaw("Horizontal") * Accel,
+        //    ForceMode.Impulse
+        //    );
+
+        var pos = this.transform.position;
+        pos.x += Input.GetAxisRaw("Horizontal") * Speed * Time.deltaTime;
+        this.transform.position = pos;
     }
 }
