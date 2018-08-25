@@ -10,6 +10,8 @@ public class GoalArea : MonoBehaviour
         if (other.gameObject.tag == "Ball")
         {
             Debug.Log("Goal!!");
+            other.gameObject.GetComponent<BallCtrl>().OnGoal();
+            MainSceneManager.Instance.OnGoal();
         }
     }
 }
