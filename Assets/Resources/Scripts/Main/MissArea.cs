@@ -9,9 +9,7 @@ public class MissArea : MonoBehaviour
     {
         if (other.gameObject.tag == "Ball")
         {
-            Debug.Log("Restart");
-            // TODO: 今いるシーンをリスタートする
-            SceneManager.LoadScene("Level0");
+            MainSceneManager.Instance.RequestRetry();
         }
     }
 }

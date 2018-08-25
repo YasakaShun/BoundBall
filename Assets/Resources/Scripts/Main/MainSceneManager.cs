@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class MainSceneManager : MonoBehaviour
@@ -15,11 +16,17 @@ public class MainSceneManager : MonoBehaviour
     public static MainSceneManager Instance { get; private set; }
     private SceneState State { get; set; }
 
-    void Awake()
+    public void RequestTitle()
     {
-        Debug.Assert(Instance == null);
-        Instance = this;
-        State = SceneState.Ready;
+        Debug.Log("Title");
+        SceneManager.LoadScene("Title");
+    }
+
+    public void RequestRetry()
+    {
+        Debug.Log("Restart");
+        // TODO: 今いるシーンをリスタートする
+        SceneManager.LoadScene("Level0");
     }
 
     public void Miss()
@@ -30,6 +37,17 @@ public class MainSceneManager : MonoBehaviour
     public void OnGoal()
     {
         State = SceneState.Goal;
+
+        GameObject.Find("ResultCanvas").GetComponent<Canvas>().enabled = true;
+    }
+
+    void Awake()
+    {
+        Debug.Assert(Instance == null);
+        Instance = this;
+        State = SceneState.Ready;
+
+        GameObject.Find("ResultCanvas").GetComponent<Canvas>().enabled = false;
     }
 
     void Start()
