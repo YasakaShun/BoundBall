@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Resources\Scripts\Main\BallCtrl.cs" />
+    <Compile Include="Assets\Resources\Scripts\Main\CountDownCanvas.cs" />
     <Compile Include="Assets\Resources\Scripts\Main\GoalArea.cs" />
     <Compile Include="Assets\Resources\Scripts\Main\MainSceneManager.cs" />
     <Compile Include="Assets\Resources\Scripts\Main\MissArea.cs" />

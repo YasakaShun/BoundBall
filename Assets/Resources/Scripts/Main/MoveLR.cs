@@ -12,6 +12,16 @@ public class MoveLR : MonoBehaviour
 
     void Update()
     {
+        if (MainSceneManager.Instance.State != MainSceneManager.SceneState.Main)
+        {
+            return;
+        }
+
+        if (MainSceneManager.Instance.TimeCtrl.IsStop)
+        {
+            return;
+        }
+
         //力を加える
         //this.GetComponent<Rigidbody>().AddForce(
         //    Vector3.right * Input.GetAxisRaw("Horizontal") * Accel,

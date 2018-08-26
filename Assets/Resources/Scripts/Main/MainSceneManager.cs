@@ -15,6 +15,14 @@ public class MainSceneManager : MonoBehaviour
 
     public static MainSceneManager Instance { get; private set; }
     public SceneState State { get; private set; }
+    public TimeCtrl TimeCtrl { get; private set; }
+
+    public void RequestStart()
+    {
+        Debug.Log("Start");
+        Debug.Assert(State == SceneState.Ready);
+        State = SceneState.Main;
+    }
 
     public void RequestTitle()
     {
@@ -47,8 +55,10 @@ public class MainSceneManager : MonoBehaviour
         Debug.Assert(Instance == null);
         Instance = this;
 
-        State = SceneState.Main;
-        mTimeCtrl = new TimeCtrl();
+        State = SceneState.Ready;
+        TimeCtrl = new TimeCtrl();
+
+        Instantiate(ResourcesManager.CountDownCanvas);
     }
 
     void Start()
@@ -64,16 +74,14 @@ public class MainSceneManager : MonoBehaviour
 
         if (Input.GetKeyDown("space"))
         {
-            if (mTimeCtrl.IsStop)
+            if (TimeCtrl.IsStop)
             {
-                mTimeCtrl.Play();
+                TimeCtrl.Play();
             }
             else
             {
-                mTimeCtrl.Stop();
+                TimeCtrl.Stop();
             }
         }
     }
-
-    TimeCtrl mTimeCtrl;
 }
