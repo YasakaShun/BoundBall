@@ -31,11 +31,15 @@ public class MainSceneManager : MonoBehaviour
     public void OnMiss()
     {
         State = SceneState.Miss;
+
+        Instantiate(ResourcesManager.MissCanvas);
     }
 
     public void OnGoal()
     {
         State = SceneState.Goal;
+
+        Instantiate(ResourcesManager.ResultCanvas);
     }
 
     void Awake()
