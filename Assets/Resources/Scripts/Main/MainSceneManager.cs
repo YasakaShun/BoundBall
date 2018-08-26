@@ -16,6 +16,7 @@ public class MainSceneManager : MonoBehaviour
     public static MainSceneManager Instance { get; private set; }
     public SceneState State { get; private set; }
     public TimeCtrl TimeCtrl { get; private set; }
+    public SlideCounter SlideCounter { get; private set; }
 
     public void RequestStart()
     {
@@ -49,8 +50,14 @@ public class MainSceneManager : MonoBehaviour
 
         Instantiate(ResourcesManager.ResultCanvas);
 
+        // セーブデータにクリア記録を設定
         {
             string name = SceneManager.GetActiveScene().name;
+            // テストシーンに対しては何もしない
+            if (name.Contains("Test"))
+            {
+                return;
+            }
             string head = "Level";
             int levelNo = int.Parse(name.Substring(name.IndexOf(head) + head.Length));
             var data = GameSystem.Instance.SaveDataManager.GetLevelData(levelNo);
@@ -66,6 +73,7 @@ public class MainSceneManager : MonoBehaviour
 
         State = SceneState.Ready;
         TimeCtrl = new TimeCtrl();
+        SlideCounter = new SlideCounter();
 
         Instantiate(ResourcesManager.CountDownCanvas);
     }
@@ -92,5 +100,7 @@ public class MainSceneManager : MonoBehaviour
                 TimeCtrl.Stop();
             }
         }
+
+        SlideCounter.Update();
     }
 }
