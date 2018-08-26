@@ -7,9 +7,15 @@ public class MissArea : MonoBehaviour
 {
     void OnTriggerEnter(Collider other)
     {
+        if (MainSceneManager.Instance.State != MainSceneManager.SceneState.Main)
+        {
+            return;
+        }
+
         if (other.gameObject.tag == "Ball")
         {
-            MainSceneManager.Instance.RequestRetry();
+            Debug.Log("Miss!");
+            MainSceneManager.Instance.OnMiss();
         }
     }
 }

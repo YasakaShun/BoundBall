@@ -4,7 +4,7 @@ using System.Collections;
 
 public class MainSceneManager : MonoBehaviour
 {
-    enum SceneState
+    public enum SceneState
     {
         Ready,
         Main,
@@ -14,7 +14,7 @@ public class MainSceneManager : MonoBehaviour
     }
 
     public static MainSceneManager Instance { get; private set; }
-    private SceneState State { get; set; }
+    public SceneState State { get; private set; }
 
     public void RequestTitle()
     {
@@ -29,7 +29,7 @@ public class MainSceneManager : MonoBehaviour
         SceneManager.LoadScene("Level0");
     }
 
-    public void Miss()
+    public void OnMiss()
     {
         State = SceneState.Miss;
     }
@@ -37,22 +37,17 @@ public class MainSceneManager : MonoBehaviour
     public void OnGoal()
     {
         State = SceneState.Goal;
-
-        GameObject.Find("ResultCanvas").GetComponent<Canvas>().enabled = true;
     }
 
     void Awake()
     {
         Debug.Assert(Instance == null);
         Instance = this;
-        State = SceneState.Ready;
-
-        GameObject.Find("ResultCanvas").GetComponent<Canvas>().enabled = false;
     }
 
     void Start()
     {
-
+        State = SceneState.Main;
     }
 
     void Update()

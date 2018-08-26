@@ -65,7 +65,9 @@
     <Compile Include="Assets\Resources\Scripts\Main\GoalArea.cs" />
     <Compile Include="Assets\Resources\Scripts\Main\MainSceneManager.cs" />
     <Compile Include="Assets\Resources\Scripts\Main\MissArea.cs" />
+    <Compile Include="Assets\Resources\Scripts\Main\MissCanvas.cs" />
     <Compile Include="Assets\Resources\Scripts\Main\MoveLR.cs" />
+    <Compile Include="Assets\Resources\Scripts\Main\ResultCanvas.cs" />
     <Compile Include="Assets\Resources\Scripts\Title\TitleGameSystem.cs" />
     <Compile Include="Assets\WallUv.cs" />
     <None Include="Assets\Resources\Gradation.shader" />
