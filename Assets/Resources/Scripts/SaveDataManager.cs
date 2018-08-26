@@ -13,7 +13,11 @@ public class SaveDataManager
 
     public SaveDataManager()
     {
-        Data = Enumerable.Repeat(new LevelData(), MaxLevelNum).ToList();
+        Data = new List<LevelData>(MaxLevelNum);
+        for (int i = 0; i < MaxLevelNum; ++i)
+        {
+            Data.Add(new LevelData());
+        }
     }
 
     // 見た目のステージ番号を内部のindexに変換して適切なデータを返す

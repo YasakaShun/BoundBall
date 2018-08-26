@@ -14,9 +14,13 @@ public class GameSystem : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
+            SaveDataManager = new SaveDataManager();
+            DontDestroyOnLoad(this.gameObject);
         }
-
-        SaveDataManager = new SaveDataManager();
+        else
+        {
+            Destroy(this.gameObject);
+        }
     }
 
     private void Quit()

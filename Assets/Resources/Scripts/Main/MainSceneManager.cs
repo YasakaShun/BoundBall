@@ -48,6 +48,15 @@ public class MainSceneManager : MonoBehaviour
         State = SceneState.Goal;
 
         Instantiate(ResourcesManager.ResultCanvas);
+
+        {
+            string name = SceneManager.GetActiveScene().name;
+            string head = "Level";
+            int levelNo = int.Parse(name.Substring(name.IndexOf(head) + head.Length));
+            var data = GameSystem.Instance.SaveDataManager.GetLevelData(levelNo);
+            data.StarNum = 2;
+            data.IsClear = true;
+        }
     }
 
     void Awake()
