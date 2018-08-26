@@ -61,6 +61,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Resources\Scripts\GameSystem.cs" />
+    <Compile Include="Assets\Resources\Scripts\LevelData.cs" />
     <Compile Include="Assets\Resources\Scripts\Main\BallCtrl.cs" />
     <Compile Include="Assets\Resources\Scripts\Main\CountDownCanvas.cs" />
     <Compile Include="Assets\Resources\Scripts\Main\GoalArea.cs" />
@@ -71,8 +73,8 @@
     <Compile Include="Assets\Resources\Scripts\Main\TimeCtrl.cs" />
     <Compile Include="Assets\Resources\Scripts\Main\TitleBtn.cs" />
     <Compile Include="Assets\Resources\Scripts\ResourcesManager.cs" />
+    <Compile Include="Assets\Resources\Scripts\SaveDataManager.cs" />
     <Compile Include="Assets\Resources\Scripts\Title\LevelBtn.cs" />
-    <Compile Include="Assets\Resources\Scripts\Title\TitleGameSystem.cs" />
     <Compile Include="Assets\WallUv.cs" />
     <None Include="Assets\Resources\Shaders\Gradation.shader" />
     <None Include="Assets\Resources\Shaders\VertexColor.shader" />
