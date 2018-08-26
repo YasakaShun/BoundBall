@@ -25,8 +25,7 @@ public class MainSceneManager : MonoBehaviour
     public void RequestRetry()
     {
         Debug.Log("Restart");
-        // TODO: 今いるシーンをリスタートする
-        SceneManager.LoadScene("Level0");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void OnMiss()
