@@ -46,14 +46,34 @@ public class MainSceneManager : MonoBehaviour
     {
         Debug.Assert(Instance == null);
         Instance = this;
+
+        State = SceneState.Main;
+        mTimeCtrl = new TimeCtrl();
     }
 
     void Start()
     {
-        State = SceneState.Main;
     }
 
     void Update()
     {
+        if (State != SceneState.Main)
+        {
+            return;
+        }
+
+        if (Input.GetKeyDown("space"))
+        {
+            if (mTimeCtrl.IsStop)
+            {
+                mTimeCtrl.Play();
+            }
+            else
+            {
+                mTimeCtrl.Stop();
+            }
+        }
     }
+
+    TimeCtrl mTimeCtrl;
 }
