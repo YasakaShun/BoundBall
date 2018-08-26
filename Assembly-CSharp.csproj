@@ -66,10 +66,12 @@
     <Compile Include="Assets\Resources\Scripts\Main\BallCtrl.cs" />
     <Compile Include="Assets\Resources\Scripts\Main\CountDownCanvas.cs" />
     <Compile Include="Assets\Resources\Scripts\Main\GoalArea.cs" />
+    <Compile Include="Assets\Resources\Scripts\Main\LengthGauge.cs" />
     <Compile Include="Assets\Resources\Scripts\Main\MainSceneManager.cs" />
     <Compile Include="Assets\Resources\Scripts\Main\MissArea.cs" />
     <Compile Include="Assets\Resources\Scripts\Main\MoveLR.cs" />
     <Compile Include="Assets\Resources\Scripts\Main\RetryBtn.cs" />
+    <Compile Include="Assets\Resources\Scripts\Main\SlideCounter.cs" />
     <Compile Include="Assets\Resources\Scripts\Main\TimeCtrl.cs" />
     <Compile Include="Assets\Resources\Scripts\Main\TitleBtn.cs" />
     <Compile Include="Assets\Resources\Scripts\ResourcesManager.cs" />
