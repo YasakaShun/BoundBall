@@ -7,10 +7,12 @@ public class SlideCounter
     private const float Speed = 15.0f;
 
     public float ScrollValue { get; private set; }
+    public float GoalLength { get; private set; }
 
     public SlideCounter()
     {
         ScrollValue = 0.0f;
+        GoalLength = GameObject.Find("Goal").transform.position.x;
     }
 
     public void Update()
