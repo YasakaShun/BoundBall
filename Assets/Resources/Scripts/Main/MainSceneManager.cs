@@ -56,6 +56,8 @@ public class MainSceneManager : MonoBehaviour
         State = SceneState.Miss;
 
         Instantiate(ResourcesManager.MissCanvas);
+        Destroy(GameObject.Find("LengthGauge").gameObject);
+        Destroy(GameObject.Find("BtnCanvas").gameObject);
     }
 
     public void OnGoal()
@@ -63,6 +65,8 @@ public class MainSceneManager : MonoBehaviour
         State = SceneState.Goal;
 
         Instantiate(ResourcesManager.ResultCanvas);
+        Destroy(GameObject.Find("LengthGauge").gameObject);
+        Destroy(GameObject.Find("BtnCanvas").gameObject);
 
         // セーブデータにクリア記録を設定
         {
