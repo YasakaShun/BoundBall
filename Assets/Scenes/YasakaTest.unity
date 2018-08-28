@@ -306,18 +306,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1800164417706844, guid: 8cd468e2291c9a44b83a199f613e26fd, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1809225137133206, guid: 8cd468e2291c9a44b83a199f613e26fd, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1809225137133206, guid: 8cd468e2291c9a44b83a199f613e26fd, type: 2}
-      propertyPath: m_Name
-      value: BtnCanvas
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8cd468e2291c9a44b83a199f613e26fd, type: 2}
   m_IsPrefabAsset: 0
