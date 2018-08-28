@@ -64,7 +64,8 @@ LightmapSettings:
     m_CompAOExponent: 1
     m_CompAOExponentDirect: 0
     m_Padding: 2
-    m_LightmapParameters: {fileID: 0}
+    m_LightmapParameters: {fileID: 15204, guid: 0000000000000000f000000000000000,
+      type: 0}
     m_LightmapsBakeMode: 1
     m_TextureCompression: 1
     m_FinalGather: 0
@@ -261,7 +262,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4035178998635462, guid: 424c6e884d879a045950223f2b19574b, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4030885181246530, guid: 424c6e884d879a045950223f2b19574b, type: 2}
       propertyPath: m_LocalScale.x
@@ -278,6 +279,10 @@ Prefab:
     - target: {fileID: 4030885181246530, guid: 424c6e884d879a045950223f2b19574b, type: 2}
       propertyPath: m_LocalPosition.x
       value: -6.4000015
+      objectReference: {fileID: 0}
+    - target: {fileID: 4030885181246530, guid: 424c6e884d879a045950223f2b19574b, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 424c6e884d879a045950223f2b19574b, type: 2}
@@ -650,6 +655,26 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8cd468e2291c9a44b83a199f613e26fd, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1501048106 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1311008172302898, guid: 8cd468e2291c9a44b83a199f613e26fd,
+    type: 2}
+  m_PrefabInternal: {fileID: 1501048105}
+--- !u!54 &1501048107
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1501048106}
+  serializedVersion: 2
+  m_Mass: 50
+  m_Drag: 30
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 124
+  m_CollisionDetection: 0
 --- !u!1 &1942702930
 GameObject:
   m_ObjectHideFlags: 0
