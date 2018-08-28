@@ -18,6 +18,20 @@ public class MainSceneManager : MonoBehaviour
     public TimeCtrl TimeCtrl { get; private set; }
     public SlideCounter SlideCounter { get; private set; }
 
+    public bool IsHoldL
+    {
+        get { return mIsHoldL; }
+        set { mIsHoldL = value; }
+    }
+    private bool mIsHoldL;
+
+    public bool IsHoldR
+    {
+        get { return mIsHoldR; }
+        set { mIsHoldR = value; }
+    }
+    private bool mIsHoldR;
+
     public void RequestStart()
     {
         Debug.Log("Start");
@@ -64,6 +78,26 @@ public class MainSceneManager : MonoBehaviour
             data.StarNum = 2;
             data.IsClear = true;
         }
+    }
+
+    public void PointerDownBtnL()
+    {
+        IsHoldL = true;
+    }
+
+    public void PointerUpBtnL()
+    {
+        IsHoldL = false;
+    }
+
+    public void PointerDownBtnR()
+    {
+        IsHoldR = true;
+    }
+
+    public void PointerUpBtnR()
+    {
+        IsHoldR = false;
     }
 
     void Awake()

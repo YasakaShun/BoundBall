@@ -27,6 +27,17 @@ public class SlideCounter
             return;
         }
 
-        ScrollValue += Input.GetAxisRaw("Horizontal") * Speed * Time.deltaTime;
+        if (MainSceneManager.Instance.IsHoldL)
+        {
+            ScrollValue -= Speed * Time.deltaTime;
+        }
+        else if (MainSceneManager.Instance.IsHoldL)
+        {
+            ScrollValue += Speed * Time.deltaTime;
+        }
+        else
+        {
+            ScrollValue += Input.GetAxisRaw("Horizontal") * Speed * Time.deltaTime;
+        }
     }
 }
